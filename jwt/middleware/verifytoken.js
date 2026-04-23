@@ -1,8 +1,7 @@
 import jwt from "jsonwebtoken";
 import userModel from "../models/user.js";
 
-const 
-verifyJWTToken = (req, res, next) => {
+const verifyJWTToken = (req, res, next) => {
   if (
     req.headers &&
     req.headers.authorization &&

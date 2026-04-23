@@ -22,7 +22,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     enum: ["normal", "admin"], // Can only be one of these values
     required: true,
-    
   },
   password: {
     type: String,

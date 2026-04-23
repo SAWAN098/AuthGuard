@@ -14,6 +14,16 @@ export default (req, res, next) => {
 
     let usage = user.usage.find((day) => day.date == today);
 
+    if (!usage) {
+      res.status(400).json({
+        error: {
+          code: 400,
+          message: "Usage data not found for today.",
+        },
+      });
+      return;
+    }
+
     if (usage.count >= maxApiHit) {
       //stop if the usage exceeds max API calls
       res.status(429).json({

@@ -2,9 +2,9 @@
 // cookies are small files which is stored on user browser - used to remember information about you, When you visit the same website again, your browser sends the cookie back, so the site recognizes you.
 // Cookies usually contain key–value pairs (e.g., session_id=12345).
 
-const express = require("express");
-const session = require("express-session");
-const dotenv = require("dotenv");
+import express from "express";
+import session from "express-session";
+import dotenv from "dotenv";
 
 const app = express();
 
@@ -94,5 +94,5 @@ app.post("/logout", (req, res) => {
 
 // Start server
 app.listen(3000, () => {
-  console.log("Server running on port 8080");
+  console.log("Server running on port 3000");
 });

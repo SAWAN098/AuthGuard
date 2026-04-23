@@ -14,7 +14,7 @@ Typical values: 10–12 in production.
 */
 export default async (req, res) => {
   userModel
-    .insertOne({
+    .create({
       fullName: req.body.fullName,
       email: req.body.email,
       role: req.body.role,
