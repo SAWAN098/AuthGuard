@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     trim: true, // Removes spaces before/after
     required: true,
     validate: {
-      validator: function (v) {
+      validator: function (v) { // here v is the email string being saved and validator is the function that checks if the email is valid or not. It returns true if the email is valid and false if it is not.
         return v.includes("@"); // TODO: can be improved
       },
       message: "{VALUE} is not a valid email!",

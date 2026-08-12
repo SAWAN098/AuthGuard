@@ -1,10 +1,11 @@
-import express from "express";
 import dotenv from "dotenv";
+dotenv.config();
+console.log("INDEX SECRET:", process.env.API_SECRET);
+import express from "express";
 import userRouter from "./routes/user.js";
 import connectToMongoDB from "./database/mongodb.js";
 
 const app = express();
-dotenv.config();
 
 app.use(express.json());
 connectToMongoDB();

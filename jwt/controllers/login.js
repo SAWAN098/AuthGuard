@@ -40,9 +40,10 @@ export default async (req, res) => {
     return;
   }
 
-  var token = jwt.sign(
+  // console.log(process.env.API_SECRET);
+  let token = jwt.sign( // it a method that generates a JSON Web Token (JWT) based on the provided payload, secret key, and options.
     {
-      id: user._id, // data embedded in token
+      id: user._id, // data embedded in token : payload
     },
     process.env.API_SECRET, // digitally sign the token so the server can later verify if the token is valid and untampered.
     {
